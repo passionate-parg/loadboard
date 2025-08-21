@@ -1,0 +1,4 @@
+:root{--bg:#f7fbff;--primary:#0b4a88;}
+body{background:var(--bg);font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+.navbar-brand{color:var(--primary)!important;}
+.card{border-radius:12px;}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><%- include('partials/head') %><title>LoadBoard - Home</title></head>
+<body><%- include('partials/navbar') %>
+<main class="container py-5">
+  <% if (flash) { %><div class="alert alert-<%= flash.type %>"><%= flash.message %></div><% } %>
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">Welcome to India's leading trucking platform</h1>
+      <p class="col-md-8 fs-5">Post loads, find trucks, and manage shipments — fast and reliably.</p>
+      <% if (!(session && session.user)) { %><a class="btn btn-primary btn-lg" href="/signup">Get Started</a><% } else { %><a class="btn btn-primary btn-lg" href="/loads">Go to My Loads</a><% } %>
+    </div>
+  </div>
+  <h2 class="mb-3">Featured Trucks</h2>
+  <div class="row g-3">
+    <div class="col-md-6 col-lg-3"><div class="card"><img src="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg" class="card-img-top" alt="truck"><div class="card-body"><p class="card-text">Box Truck</p></div></div></div>
+    <div class="col-md-6 col-lg-3"><div class="card"><img src="https://images.pexels.com/photos/193667/pexels-photo-193667.jpeg" class="card-img-top" alt="truck"><div class="card-body"><p class="card-text">Flatbed</p></div></div></div>
+    <div class="col-md-6 col-lg-3"><div class="card"><img src="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg" class="card-img-top" alt="truck"><div class="card-body"><p class="card-text">Reefer</p></div></div></div>
+    <div class="col-md-6 col-lg-3"><div class="card"><img src="https://images.pexels.com/photos/1178448/pexels-photo-1178448.jpeg" class="card-img-top" alt="truck"><div class="card-body"><p class="card-text">Trailer</p></div></div></div>
+  </div>
+</main></body></html>
